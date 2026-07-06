@@ -2,10 +2,10 @@
 ========================================================================
    DR. AYESHA SAEED PEDIATRIC ORTHOPEDICS - GLOBAL STYLESHEET
    Aesthetic: Luxurious, Modern, Child-Friendly Clinical Premium
+   Note: Google Fonts loaded via non-blocking <link> in base.html
 ========================================================================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     /* Color Palette */
