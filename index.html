@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/components.css">
     
-    <!-- Lucide Icons (Premium & Modern Icons) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (Pinned stable version) -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     
     <!-- JSON-LD Structured Data / Schema.org -->
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Physician", "name": "Dr. Ayesha Saeed", "image": "https://drayeshasaeed.com/assets/images/dr-ayesha.png", "medicalSpecialty": "PediatricOrthopedics", "qualification": [{"@type": "EducationalOccupationalCredential", "name": "FCPS Orthopedics", "credentialCategory": "Gold Medalist"}, {"@type": "EducationalOccupationalCredential", "name": "Fellowship in Pediatric Orthopedics", "recognizedBy": {"@type": "MedicalOrganization", "name": "The Hospital for Sick Children (SickKids), Toronto, Canada"}}], "knowsAbout": ["Clubfoot", "Developmental Dysplasia of the Hip", "Scoliosis", "Growth Plate Injuries", "Pediatric Fractures"], "telephone": "+923000000000", "email": "inquire@drayeshasaeed.com", "url": "https://drayeshasaeed.com", "address": [{"@type": "PostalAddress", "streetAddress": "Medicare Cardiac & General Hospital, Shaheed-e-Millat Road", "addressLocality": "Karachi", "addressRegion": "Sindh", "addressCountry": "PK"}, {"@type": "PostalAddress", "streetAddress": "Horizon Hospital, Johar Town", "addressLocality": "Lahore", "addressRegion": "Punjab", "addressCountry": "PK"}]}</script>
@@ -1135,8 +1135,21 @@
     <script src="src/js/main.js"></script>
     <script src="src/js/booking.js"></script>
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        // Initialize Lucide Icons — safe guard for DOM readiness
+        (function() {
+            function initLucide() {
+                try {
+                    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                        lucide.createIcons();
+                    }
+                } catch(e) { /* silently ignore icon init errors */ }
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initLucide);
+            } else {
+                initLucide();
+            }
+        })();
     </script>
 </body>
 </html>

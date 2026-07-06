@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/components.css">
     
-    <!-- Lucide Icons (Premium & Modern Icons) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (Pinned stable version) -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     
     <!-- JSON-LD Structured Data / Schema.org -->
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://drayeshasaeed.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Conditions", "item": "https://drayeshasaeed.com/conditions.html"}, {"@type": "ListItem", "position": 3, "name": "Bow Legs (Genu Varum)", "item": "https://drayeshasaeed.com/conditions/bow-legs.html"}]}</script>
@@ -519,8 +519,21 @@
     <script src="../src/js/main.js"></script>
     <script src="../src/js/booking.js"></script>
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        // Initialize Lucide Icons — safe guard for DOM readiness
+        (function() {
+            function initLucide() {
+                try {
+                    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                        lucide.createIcons();
+                    }
+                } catch(e) { /* silently ignore icon init errors */ }
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initLucide);
+            } else {
+                initLucide();
+            }
+        })();
     </script>
 </body>
 </html>
