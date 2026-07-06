@@ -1900,6 +1900,336 @@ textarea.form-input {
     margin-top: var(--space-lg);
 }
 
+/* ======================================================
+   COMPREHENSIVE MOBILE RESPONSIVE OVERRIDES
+   Breakpoints: ≤768px (tablets & phones), ≤480px (phones)
+   ====================================================== */
+
+/* --- Utility: Hide on mobile, show on desktop --- */
+.hide-on-mobile {
+    display: none !important;
+}
+@media (min-width: 769px) {
+    .hide-on-mobile {
+        display: block !important;
+    }
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+
+/* --- Global mobile typography --- */
+@media (max-width: 768px) {
+    h1 { font-size: clamp(1.7rem, 7vw, 2.4rem) !important; line-height: 1.2 !important; }
+    h2 { font-size: clamp(1.4rem, 6vw, 2rem) !important; line-height: 1.25 !important; }
+    h3 { font-size: clamp(1.1rem, 5vw, 1.45rem) !important; }
+    h4 { font-size: 1rem !important; }
+    p  { font-size: 0.95rem !important; }
+
+    .section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    .container {
+        padding-right: 1.1rem !important;
+        padding-left: 1.1rem !important;
+    }
+    .section-header {
+        margin-bottom: 1.75rem !important;
+    }
+    .section-header p {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* --- Hero Section Mobile --- */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 95px !important;
+        padding-bottom: 3rem !important;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center;
+    }
+    .hero-content {
+        order: 1;
+    }
+    .hero-visual {
+        order: 2;
+    }
+    .hero h1 {
+        font-size: clamp(1.7rem, 7.5vw, 2.3rem) !important;
+        margin-bottom: 0.75rem !important;
+    }
+    .hero .subheading {
+        font-size: 0.95rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+    .hero-ctas {
+        justify-content: center !important;
+        gap: 0.65rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+    .hero-ctas .btn {
+        font-size: 0.85rem !important;
+        padding: 0.6rem 1.1rem !important;
+    }
+    .trust-badges {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+        padding-top: 1rem !important;
+    }
+    .trust-badge-item {
+        font-size: 0.78rem !important;
+        gap: 0.35rem !important;
+    }
+    /* Hide the arch portrait frame on mobile — only show text content */
+    .hero-portrait-frame {
+        max-width: 240px !important;
+        height: 310px !important;
+    }
+    /* Hide floating qualifications badge on mobile - too cramped */
+    .hero-visual .reveal.delay-400 {
+        display: none !important;
+    }
+    .hero-visual > div > div[style*="min-height: 480px"] {
+        min-height: 320px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.65rem !important;
+    }
+    .hero-portrait-frame {
+        max-width: 200px !important;
+        height: 270px !important;
+    }
+}
+
+/* --- About Section Mobile --- */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    /* Hide the surgery collage (about-visual) on mobile */
+    .about-visual {
+        display: none !important;
+    }
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+        margin-top: 1.25rem !important;
+    }
+    .stat-num {
+        font-size: 1.6rem !important;
+    }
+    .stat-item {
+        padding: 0.85rem !important;
+    }
+}
+
+/* --- Services / Conditions Cards Mobile --- */
+@media (max-width: 768px) {
+    .conditions-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+    .condition-card {
+        padding: 1rem !important;
+    }
+    .condition-card h3 {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* --- Milestones / Steps Section Mobile --- */
+@media (max-width: 768px) {
+    .milestones-grid,
+    .treatments-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+}
+
+/* --- Why Choose / Features Section Mobile --- */
+@media (max-width: 768px) {
+    .why-choose-layout {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+}
+
+/* --- Hospital Cards Section Mobile --- */
+@media (max-width: 768px) {
+    .hospital-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    .hospital-card-body {
+        padding: 1.1rem !important;
+    }
+    .hospital-card h3 {
+        font-size: 1.1rem !important;
+    }
+    .hospital-map-container {
+        height: 220px !important;
+    }
+    .hospital-actions {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+    .hospital-actions .btn {
+        font-size: 0.8rem !important;
+        padding: 0.55rem 0.9rem !important;
+    }
+}
+
+/* --- Blog / Education Card Grid Mobile --- */
+@media (max-width: 768px) {
+    .blog-grid,
+    .education-grid,
+    .media-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+}
+
+/* --- Booking / Contact Forms Mobile --- */
+@media (max-width: 768px) {
+    .booking-grid,
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    .hospital-select-container {
+        flex-direction: column !important;
+        gap: 0.65rem !important;
+    }
+    .hospital-option {
+        width: 100% !important;
+    }
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 0.85rem !important;
+    }
+    .modal-content {
+        margin: 0.5rem !important;
+        max-height: 92vh !important;
+        overflow-y: auto !important;
+    }
+    .modal-header {
+        padding: 1rem !important;
+    }
+    .modal-body {
+        padding: 1rem !important;
+    }
+}
+
+/* --- FAQs Section Mobile --- */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 0.9rem !important;
+        padding: 0.9rem 1rem !important;
+    }
+    .faq-answer-content {
+        font-size: 0.88rem !important;
+        padding: 0 1rem 0.9rem !important;
+    }
+}
+
+/* --- Footer Mobile --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.75rem !important;
+    }
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 0.5rem !important;
+    }
+    .footer-links {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+}
+
+/* --- Nav Mobile Hamburger Refinements --- */
+@media (max-width: 768px) {
+    .header-container {
+        height: 65px !important;
+    }
+    .logo-title {
+        font-size: 1rem !important;
+    }
+    .logo-subtitle {
+        font-size: 0.65rem !important;
+    }
+    .logo-icon {
+        width: 34px !important;
+        height: 34px !important;
+    }
+    .nav-cta-btn {
+        display: none !important;
+    }
+}
+
+/* --- Inner page heroes mobile --- */
+@media (max-width: 768px) {
+    .inner-page-hero {
+        padding-top: 100px !important;
+        padding-bottom: 3rem !important;
+    }
+    .inner-page-hero h1 {
+        font-size: clamp(1.5rem, 6.5vw, 2rem) !important;
+    }
+    .inner-page-hero p {
+        font-size: 0.9rem !important;
+    }
+    .breadcrumb {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* --- Sidebar layout (conditions detail) mobile --- */
+@media (max-width: 768px) {
+    .condition-detail-layout,
+    .blog-detail-layout {
+        grid-template-columns: 1fr !important;
+    }
+    .sidebar {
+        order: -1 !important;
+    }
+}
+
+/* --- Media / Video page mobile --- */
+@media (max-width: 768px) {
+    .featured-media-box {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* --- Prevent horizontal overflow globally on mobile --- */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+    }
+    .wave-divider-top svg,
+    .wave-divider-bottom svg {
+        height: 40px !important;
+    }
+}
+
 @media (max-width: 992px) {
     .why-choose-layout {
         grid-template-columns: 1fr;
