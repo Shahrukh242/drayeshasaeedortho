@@ -1,0 +1,94 @@
+<section class="section-bg-dark inner-page-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i data-lucide="chevron-right"></i>
+            <a href="../education.html">Parent Education</a>
+            <i data-lucide="chevron-right"></i>
+            <span>Article Details</span>
+        </div>
+        <span class="badge" style="background-color: var(--color-accent); color: var(--color-secondary-dark); margin-bottom: var(--space-sm);">{{ CATEGORY }}</span>
+        <h1>{{ TITLE }}</h1>
+        <div style="display: flex; gap: var(--space-md); font-size: 0.85rem; color: var(--color-primary-light);">
+            <span>By Dr. Ayesha Saeed</span>
+            <span>&bull;</span>
+            <span>{{ DATE }}</span>
+            <span>&bull;</span>
+            <span>{{ READ_TIME }}</span>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container inner-grid">
+        <!-- Main Article Content -->
+        <article class="reveal">
+            <!-- Article Header Image -->
+            <div class="blog-detail-hero-img" style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--space-md); border: 1px solid var(--color-border); box-shadow: var(--shadow-md); height: 350px;">
+                <img src="{{ RELATIVE_PATH }}assets/images/blog/{{ SLUG }}.jpg" alt="{{ TITLE }}" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            
+            <div class="rich-text">
+                <p class="subheading" style="font-size: 1.25rem; font-weight: 500; color: var(--color-secondary); margin-bottom: var(--space-md); line-height: 1.5;">{{ INTRO }}</p>
+                
+                {{ CONTENT }}
+            </div>
+
+            <!-- Share Buttons & Author Box -->
+            <div style="margin-top: var(--space-lg); border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+                <div class="share-buttons" style="margin-bottom: var(--space-lg);">
+                    <span class="share-title">Share with other parents:</span>
+                    <a href="#" class="share-btn" onclick="event.preventDefault(); window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))" aria-label="Share on Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="share-btn" onclick="event.preventDefault(); window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href))" aria-label="Share on Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="share-btn" onclick="event.preventDefault(); window.open('https://wa.me/?text='+encodeURIComponent(window.location.href))" aria-label="Share on WhatsApp"><i data-lucide="message-circle"></i></a>
+                </div>
+
+                <!-- Author Bio Card -->
+                <div style="background-color: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-md); display: flex; gap: var(--space-md); align-items: center; flex-wrap: wrap;">
+                    <div style="width: 60px; height: 60px; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">AS</div>
+                    <div>
+                        <h4 style="color: var(--color-secondary); font-size: 1.05rem; margin-bottom: 0.15rem;">Written &amp; Medically Reviewed by Dr. Ayesha Saeed</h4>
+                        <p style="font-size: 0.85rem; color: var(--color-text-muted);">Gold Medalist Pediatric Orthopedic Surgeon. Fellow of The Hospital for Sick Children (SickKids), Toronto, Canada. 10+ Years clinical and surgical experience.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="reveal delay-150">
+            <!-- Booking CTA -->
+            <div class="sidebar-box" style="background-color: var(--color-secondary-light); border-color: rgba(23,63,95,0.1);">
+                <h3 style="color: var(--color-secondary); border-color: rgba(23,63,95,0.15);">Consultation Booking</h3>
+                <p style="font-size: 0.9rem; margin-bottom: var(--space-sm); color: var(--color-secondary);">Have a concern about your child's bones, joints, or posture? Discuss it directly with Dr. Ayesha.</p>
+                <button class="btn btn-primary btn-sm btn-book-trigger" style="width: 100%;">
+                    <i data-lucide="calendar"></i> Book Appointment
+                </button>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="sidebar-box">
+                <h3>Related Articles</h3>
+                <div class="sidebar-links">
+                    {{ RELATED_ARTICLES_LINKS }}
+                </div>
+            </div>
+
+            <!-- Other Guides -->
+            <div class="sidebar-box">
+                <h3>More Parent Guides</h3>
+                <div class="sidebar-links">
+                    {{ OTHER_BLOG_LINKS }}
+                </div>
+            </div>
+            
+            <!-- Quick Contact info -->
+            <div class="sidebar-box">
+                <h3>Quick Contact</h3>
+                <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: var(--space-xs);">
+                    <p><strong>WhatsApp Support:</strong> +92 300 000 0000</p>
+                    <p><strong>General Timing:</strong> Monday to Saturday (9am - 9pm)</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>

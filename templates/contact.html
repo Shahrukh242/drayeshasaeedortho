@@ -1,0 +1,161 @@
+<section class="section-bg-dark inner-page-hero" style="position: relative; overflow: hidden; padding-bottom: calc(var(--space-md) + 2rem);">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <i data-lucide="chevron-right"></i>
+            <span>Contact</span>
+        </div>
+        <h1>Contact Our Clinics</h1>
+        <p style="max-width: 800px; color: var(--color-primary-light);">Get in touch with our clinical coordinators in Karachi or Lahore to book consultations, follow-ups, or surgical evaluations.</p>
+    </div>
+    
+    <!-- Wave bottom divider -->
+    <div class="wave-divider-bottom wave-divider-white">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0c26.9,4.92,55.15,10.15,83.08,14.86,90.53,15.22,181.09,29.87,272.58,40.16C342.36,55.58,321.39,56.44,321.39,56.44Z"></path>
+        </svg>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="about-grid">
+            <!-- Contact Info -->
+            <div class="contact-info-panel reveal">
+                <span class="hero-tag">Reach Us Directly</span>
+                <h2 style="margin-bottom: var(--space-sm);">Consultation Hospital Channels</h2>
+                <p style="margin-bottom: var(--space-md);">For urgent matters regarding child plaster casts, severe fractures, or post-operative concerns, please contact the respective hospital emergency rooms or call our clinical assistants directly.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: var(--space-md); margin-bottom: var(--space-lg);">
+                    <div style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+                        <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--color-secondary);">Phone (Direct Assistant)</h4>
+                            <p style="font-size: 0.95rem; font-weight: 600;">+92 300 000 0000</p>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Available Monday to Saturday (9:00 AM – 9:00 PM)</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+                        <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--color-secondary);">Email Inquiry</h4>
+                            <p style="font-size: 0.95rem; font-weight: 600;">inquire@drayeshasaeed.com</p>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Replies within 24 business hours.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-start; gap: var(--space-sm);">
+                        <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i data-lucide="message-circle" style="color: #25D366;"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--color-secondary);">WhatsApp Support</h4>
+                            <p style="font-size: 0.95rem; font-weight: 600;">+92 300 000 0000</p>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Instant messaging for slot queries and cast guidance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+                    <h3 style="font-size: 1.15rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">Karachi Clinic</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: var(--space-sm);">Medicare Cardiac &amp; General Hospital<br>Tuesday &amp; Thursday: 7:00 PM – 8:30 PM<br><strong>UAN:</strong> 111-001-786 | <strong>Cell:</strong> 0302-8562081</p>
+                    
+                    <h3 style="font-size: 1.15rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">Lahore Clinic</h3>
+                    <p style="font-size: 0.9rem;">Horizon Hospital<br>Fortnightly Saturday: 11:00 AM – 1:00 PM<br><strong>Cell:</strong> 0321-9992911</p>
+                </div>
+            </div>
+
+            <!-- Booking form integration -->
+            <div class="booking-form-wrapper reveal delay-150">
+                <h3 style="color: var(--color-secondary); margin-bottom: var(--space-sm); border-bottom: 2px solid var(--color-primary-light); padding-bottom: 0.5rem;">Online Booking Form</h3>
+                
+                <form id="contactBookingForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contactParentName">Parent Name *</label>
+                            <input type="text" id="contactParentName" class="form-input" required placeholder="Full name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactPhoneNumber">Phone / WhatsApp *</label>
+                            <input type="tel" id="contactPhoneNumber" class="form-input" required placeholder="e.g. +92 300 1234567">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" class="form-input" required placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactChildName">Child Name *</label>
+                            <input type="text" id="contactChildName" class="form-input" required placeholder="Child name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contactChildAge">Child Age *</label>
+                            <input type="number" id="contactChildAge" class="form-input" required min="0" max="18" placeholder="Age in years">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactMedicalConcern">Medical Concern *</label>
+                            <select id="contactMedicalConcern" class="form-input" required>
+                                <option value="" disabled selected>Select condition</option>
+                                <option value="clubfoot">Clubfoot (Talipes)</option>
+                                <option value="ddh">Hip Dysplasia (DDH)</option>
+                                <option value="bow-legs">Bow Legs</option>
+                                <option value="knock-knees">Knock Knees</option>
+                                <option value="flat-feet">Flat Feet</option>
+                                <option value="rickets">Rickets</option>
+                                <option value="scoliosis">Scoliosis (Spine)</option>
+                                <option value="fracture">Fracture &amp; Trauma</option>
+                                <option value="growth-plate">Growth Plate Injury</option>
+                                <option value="other">Other Skeletal Concern</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Preferred Hospital *</label>
+                        <div class="hospital-select-container">
+                            <label class="hospital-option selected" id="optContactMedicare">
+                                <input type="radio" name="preferredHospitalContact" value="Medicare Karachi" checked>
+                                <span class="hospital-card-content">
+                                    <span class="hospital-name">Medicare Hospital</span>
+                                    <span class="hospital-loc">Karachi</span>
+                                    <span class="hospital-time">Tue &amp; Thu</span>
+                                </span>
+                            </label>
+                            <label class="hospital-option" id="optContactHorizon">
+                                <input type="radio" name="preferredHospitalContact" value="Horizon Hospital">
+                                <span class="hospital-card-content">
+                                    <span class="hospital-name">Horizon Hospital</span>
+                                    <span class="hospital-loc">Lahore</span>
+                                    <span class="hospital-time">Fortnightly Sat</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="contactPreferredDate">Preferred Date *</label>
+                            <input type="date" id="contactPreferredDate" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactPreferredTime">Preferred Time Slot *</label>
+                            <input type="time" id="contactPreferredTime" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Appointment Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

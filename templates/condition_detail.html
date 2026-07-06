@@ -1,0 +1,92 @@
+<section class="section-bg-dark inner-page-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i data-lucide="chevron-right"></i>
+            <a href="../conditions.html">Conditions</a>
+            <i data-lucide="chevron-right"></i>
+            <span>{{ NAME }}</span>
+        </div>
+        <h1>{{ NAME }}</h1>
+        <p style="max-width: 800px; color: var(--color-primary-light);">Learn about the symptoms, common causes, and specialized pediatric treatments for {{ NAME }}.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container inner-grid">
+        <!-- Main Content -->
+        <article class="rich-text reveal">
+            <h2>Overview</h2>
+            <p>{{ INTRO }}</p>
+            
+            <h2>Common Symptoms of {{ NAME }}</h2>
+            <p>If your child is experiencing this condition, they may display one or more of the following symptoms:</p>
+            <ul>
+                {{ SYMPTOMS_LIST }}
+            </ul>
+
+            <h2>Etiology and Causes</h2>
+            <p>What causes {{ NAME }}? Pediatric orthopedic research indicates several underlying factors:</p>
+            <ul>
+                {{ CAUSES_LIST }}
+            </ul>
+
+            <h2>Advanced Treatments by Dr. Ayesha Saeed</h2>
+            <div style="background-color: var(--color-bg-light); border-left: 4px solid var(--color-primary); padding: var(--space-md); margin-bottom: var(--space-md); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                <p>{{ TREATMENT }}</p>
+            </div>
+            
+            <p>Thanks to the active bone growth and remodeling potential in infants and children, early detection allows us to implement highly effective conservative treatments. If surgery is required, Dr. Ayesha Saeed utilizes advanced, minimally invasive surgical procedures that preserve growth plates and accelerate recovery.</p>
+
+            <div class="share-buttons" style="border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+                <span class="share-title">Share this medical guide:</span>
+                <a href="#" class="share-btn" onclick="event.preventDefault(); window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))" aria-label="Share on Facebook"><i data-lucide="facebook"></i></a>
+                <a href="#" class="share-btn" onclick="event.preventDefault(); window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href))" aria-label="Share on Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" class="share-btn" onclick="event.preventDefault(); window.open('https://wa.me/?text='+encodeURIComponent(window.location.href))" aria-label="Share on WhatsApp"><i data-lucide="message-circle"></i></a>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="reveal delay-150">
+            <!-- Booking CTA -->
+            <div class="sidebar-box" style="background-color: var(--color-secondary-light); border-color: rgba(23,63,95,0.1);">
+                <h3 style="color: var(--color-secondary); border-color: rgba(23,63,95,0.15);">Consultation Booking</h3>
+                <p style="font-size: 0.9rem; margin-bottom: var(--space-sm); color: var(--color-secondary);">Get a professional evaluation for your child with Internationally Trained Specialist Dr. Ayesha Saeed.</p>
+                <button class="btn btn-primary btn-sm btn-book-trigger" style="width: 100%;">
+                    <i data-lucide="calendar"></i> Book Appointment
+                </button>
+            </div>
+
+            <!-- Other Conditions -->
+            <div class="sidebar-box">
+                <h3>Other Conditions</h3>
+                <div class="sidebar-links">
+                    {{ OTHER_CONDITIONS_LINKS }}
+                </div>
+            </div>
+
+            <!-- Parent Resources -->
+            <div class="sidebar-box">
+                <h3>Related Guides</h3>
+                <div class="sidebar-links">
+                    {{ RELATED_BLOG_LINKS }}
+                </div>
+            </div>
+
+            <!-- Hospital Schedule -->
+            <div class="sidebar-box">
+                <h3>Hospital Timings</h3>
+                <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: var(--space-xs);">
+                    <div>
+                        <strong>Medicare Karachi:</strong>
+                        <p style="color: var(--color-text-muted);">Tue &amp; Thu: 7:00 PM – 8:30 PM</p>
+                    </div>
+                    <div style="border-top: 1px solid var(--color-border); padding-top: 0.25rem;">
+                        <strong>Horizon Lahore:</strong>
+                        <p style="color: var(--color-text-muted);">Fortnightly Sat: 11:00 AM – 1:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
