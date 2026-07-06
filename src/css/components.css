@@ -2236,4 +2236,61 @@ textarea.form-input {
     }
 }
 
+/* Why Cards Uniform Grid — 6 equal cards, 2 per row always */
+.why-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    align-items: stretch;
+}
+
+.why-cards-grid .why-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    min-height: 160px;
+}
+
+.why-cards-grid .why-card .card-icon {
+    margin-bottom: var(--space-xs);
+    flex-shrink: 0;
+}
+
+.why-cards-grid .why-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+    flex-shrink: 0;
+}
+
+.why-cards-grid .why-card p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--color-text-muted);
+    flex: 1;
+}
+
+/* On mobile: why-choose-layout becomes single column (image hidden),
+   why-cards-grid fills full width with 2 equal columns */
+@media (max-width: 768px) {
+    .why-choose-layout {
+        grid-template-columns: 1fr !important;
+    }
+    .why-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+    .why-cards-grid .why-card {
+        min-height: 140px !important;
+        padding: 0.9rem !important;
+    }
+    .why-cards-grid .why-card h3 {
+        font-size: 0.88rem !important;
+    }
+    .why-cards-grid .why-card p {
+        font-size: 0.8rem !important;
+    }
+}
+
+
 

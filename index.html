@@ -415,8 +415,8 @@
         </div>
         
         <div class="why-choose-layout">
-            <!-- Left: Emotional Recovery Image -->
-            <div class="reveal" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-lux); min-height: 440px;">
+            <!-- Left: Emotional Recovery Image — hidden on mobile via CSS -->
+            <div class="reveal hide-on-mobile" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-lux); min-height: 440px;">
                 <img src="assets/images/happy-child.png" alt="Healthy active child running" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(23,63,95,0.92), rgba(0,0,0,0)); padding: var(--space-md); color: white;">
                     <h3 style="color: white; margin-bottom: var(--space-xs); font-size: 1.3rem;">Recovering the Joy of Play</h3>
@@ -424,46 +424,45 @@
                 </div>
             </div>
             
-            <!-- Right: Why Choose Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); height: 100%;">
-                <div class="card why-card reveal card-tint-mint" style="padding: var(--space-md); display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: var(--space-xs);"><i data-lucide="globe"></i></div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: var(--space-xs);">Internationally Trained</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--color-text-muted);">Trained in pediatric reconstructive orthopedics at SickKids, Toronto, Canada.</p>
+            <!-- Right: Why Choose Grid — 2 cols always, 3 rows of 2, equal sizes -->
+            <div class="why-cards-grid">
+                <div class="card why-card reveal card-tint-mint">
+                    <div class="card-icon"><i data-lucide="globe"></i></div>
+                    <h3>Internationally Trained</h3>
+                    <p>Trained in pediatric reconstructive orthopedics at SickKids, Toronto, Canada.</p>
                 </div>
                 
-                <div class="card why-card reveal delay-100 card-tint-mint" style="padding: var(--space-md); display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: var(--space-xs);"><i data-lucide="medal" class="gold-accent"></i></div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: var(--space-xs);">Gold Medalist</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--color-text-muted);">FCPS Gold Medalist, recognized for outstanding surgical capabilities.</p>
+                <div class="card why-card reveal delay-100 card-tint-mint">
+                    <div class="card-icon"><i data-lucide="medal" class="gold-accent"></i></div>
+                    <h3>Gold Medalist</h3>
+                    <p>FCPS Gold Medalist, recognized for outstanding surgical capabilities.</p>
                 </div>
                 
-                <div class="card why-card reveal delay-200 card-tint-mint" style="padding: var(--space-md); display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: var(--space-xs);"><i data-lucide="heart-handshake"></i></div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: var(--space-xs);">Evidence-Based Care</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--color-text-muted);">Aligning treatments with the latest international pediatric protocols.</p>
+                <div class="card why-card reveal delay-200 card-tint-mint">
+                    <div class="card-icon"><i data-lucide="heart-handshake"></i></div>
+                    <h3>Evidence-Based Care</h3>
+                    <p>Aligning treatments with the latest international pediatric protocols.</p>
                 </div>
                 
-                <div class="card why-card reveal delay-300 card-tint-mint" style="padding: var(--space-md); display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: var(--space-xs);"><i data-lucide="smile"></i></div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: var(--space-xs);">Child-Friendly Care</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--color-text-muted);">Clinics structured to put children at ease and remove hospital anxiety.</p>
+                <div class="card why-card reveal delay-300 card-tint-mint">
+                    <div class="card-icon"><i data-lucide="smile"></i></div>
+                    <h3>Child-Friendly Care</h3>
+                    <p>Clinics structured to put children at ease and remove hospital anxiety.</p>
                 </div>
 
-                <div class="card why-card reveal card-tint-mint" style="padding: var(--space-md); display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: var(--space-xs);"><i data-lucide="shield"></i></div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: var(--space-xs);">Growth Plate Safety</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--color-text-muted);">Specialized care protecting delicate growing bones and joints.</p>
+                <div class="card why-card reveal card-tint-mint">
+                    <div class="card-icon"><i data-lucide="shield"></i></div>
+                    <h3>Growth Plate Safety</h3>
+                    <p>Specialized care protecting delicate growing bones and joints.</p>
                 </div>
                 
-                <div class="card why-card reveal delay-100 card-tint-mint" style="padding: var(--space-md); display: flex; flex-direction: column; justify-content: center;">
-                    <div class="card-icon" style="margin-bottom: var(--space-xs);"><i data-lucide="activity"></i></div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: var(--space-xs);">Guided Growth Tech</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.4; color: var(--color-text-muted);">Using minimally invasive procedures to guide natural bone alignment.</p>
+                <div class="card why-card reveal delay-100 card-tint-mint">
+                    <div class="card-icon"><i data-lucide="activity"></i></div>
+                    <h3>Guided Growth Tech</h3>
+                    <p>Using minimally invasive procedures to guide natural bone alignment.</p>
                 </div>
             </div>
         </div>
-    </div>
     
     <!-- Wave bottom divider -->
     <div class="wave-divider-bottom wave-divider-white">
