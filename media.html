@@ -146,8 +146,6 @@
         <h1>Media &amp; Public Engagements</h1>
         <p style="max-width: 800px; color: var(--color-primary-light);">Watch Dr. Ayesha Saeed's television interviews, public medical campaigns, and pediatric health awareness lectures.</p>
     </div>
-    
-    <!-- Wave bottom divider -->
     <div class="wave-divider-bottom wave-divider-white">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0c26.9,4.92,55.15,10.15,83.08,14.86,90.53,15.22,181.09,29.87,272.58,40.16C342.36,55.58,321.39,56.44,321.39,56.44Z"></path>
@@ -163,24 +161,29 @@
             <p>Explore interviews and lectures where Dr. Ayesha explains childhood skeletal issues, prevention strategies, and treatment technologies.</p>
         </div>
 
-        <!-- Featured Wide Video: YouTube -->
+        <!-- Featured: YouTube (lazy load — no SDK until clicked) -->
         <div style="margin-bottom: var(--space-xl);" class="reveal">
             <h3 style="font-size: 1.35rem; color: var(--color-secondary); margin-bottom: var(--space-md); border-bottom: 2px solid var(--color-primary-light); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="youtube" style="color: #ff0000; width: 22px; height: 22px;"></i>
                 Featured Clinical Presentation
             </h3>
-            
-            <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-md); background: var(--color-mint-green); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lux); transition: var(--transition-smooth);" class="featured-media-box">
-                <style>
-                    @media (min-width: 768px) {
-                        .featured-media-box {
-                            grid-template-columns: 1.3fr 0.7fr !important;
-                        }
-                    }
-                </style>
-                <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #000;">
-                    <iframe src="https://www.youtube.com/embed/_ZfHEqWfXv0" title="Clinical Insights with Dr. Ayesha Saeed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-md); background: var(--color-mint-green); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lux);" class="featured-media-box">
+                <style>@media (min-width: 768px) { .featured-media-box { grid-template-columns: 1.3fr 0.7fr !important; } }</style>
+
+                <!-- YouTube lazy placeholder -->
+                <div class="lazy-video-wrapper"
+                     data-src="https://www.youtube.com/embed/_ZfHEqWfXv0?autoplay=1"
+                     data-type="youtube"
+                     style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; cursor: pointer;">
+                    <img src="https://img.youtube.com/vi/_ZfHEqWfXv0/hqdefault.jpg"
+                         alt="Dr. Ayesha Saeed Clinical Presentation"
+                         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:0;">
+                    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(255,0,0,0.88);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,0.45);transition:transform .2s;">
+                        <svg viewBox="0 0 24 24" fill="white" width="30" height="30"><polygon points="5,3 19,12 5,21"/></svg>
+                    </div>
+                    <div style="position:absolute;bottom:10px;left:12px;background:rgba(0,0,0,0.6);color:white;font-size:0.72rem;font-weight:600;padding:3px 8px;border-radius:4px;">▶ Click to play</div>
                 </div>
+
                 <div style="padding: var(--space-lg); display: flex; flex-direction: column; justify-content: center; text-align: left;">
                     <span class="badge" style="background-color: var(--color-primary); color: white; align-self: flex-start; margin-bottom: var(--space-xs); font-size: 0.75rem; font-weight: 700; border-radius: var(--radius-sm);">Featured</span>
                     <h3 style="font-size: 1.3rem; margin-bottom: var(--space-sm); color: var(--color-secondary);">Pediatric Orthopedic Clinical Presentation</h3>
@@ -189,59 +192,123 @@
             </div>
         </div>
 
-        <!-- Vertical Reels Grid -->
+        <!-- Facebook Reels (lazy load — Facebook SDK only loads on click) -->
         <div>
             <h3 style="font-size: 1.35rem; color: var(--color-secondary); margin-bottom: var(--space-md); border-bottom: 2px solid var(--color-primary-light); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="video" style="color: var(--color-primary); width: 22px; height: 22px;"></i>
                 Social Media Awareness Reels
             </h3>
-            
+
             <div class="media-grid">
+
                 <!-- Reel 1 -->
-                <div class="media-item reveal card-tint-mint" style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="portrait-video-container">
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F981080324670936%2F&show_text=false&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                    <div class="media-info" style="padding: var(--space-md); text-align: left; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                        <div>
-                            <span class="media-tag" style="background-color: rgba(69, 184, 176, 0.12); color: var(--color-primary); font-weight: 700; font-size: 0.75rem; border-radius: var(--radius-sm); padding: 0.15rem 0.35rem;">Facebook Reel</span>
-                            <h3 style="font-size: 1.05rem; margin-top: var(--space-xs); margin-bottom: var(--space-xs); line-height: 1.35;">Early Swaddling &amp; Joint Alignment Guidelines</h3>
-                            <p style="font-size: 0.85rem; color: var(--color-text-main); line-height: 1.4; margin: 0;">Crucial advice for parents on how correct swaddling supports healthy baby hip joints and skeletal development.</p>
+                <div class="media-item reveal card-tint-mint" style="display:flex;flex-direction:column;height:100%;">
+                    <div class="portrait-video-container lazy-video-wrapper"
+                         data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F981080324670936%2F&show_text=false&t=0"
+                         data-type="facebook"
+                         style="cursor:pointer;">
+                        <div class="fb-placeholder" style="position:absolute;inset:0;background:linear-gradient(160deg,#1877F2,#0a4fa8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.9rem;">
+                            <svg viewBox="0 0 24 24" fill="white" width="44" height="44"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <div style="width:58px;height:58px;border:3px solid rgba(255,255,255,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);transition:all .2s;">
+                                <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <span style="color:rgba(255,255,255,0.9);font-size:0.78rem;font-weight:600;letter-spacing:0.03em;">Tap to load reel</span>
                         </div>
+                    </div>
+                    <div class="media-info" style="padding:var(--space-md);text-align:left;flex-grow:1;">
+                        <span class="media-tag" style="background:rgba(69,184,176,0.12);color:var(--color-primary);font-weight:700;font-size:0.75rem;border-radius:var(--radius-sm);padding:0.15rem 0.35rem;">Facebook Reel</span>
+                        <h3 style="font-size:1.05rem;margin-top:var(--space-xs);margin-bottom:var(--space-xs);line-height:1.35;">Early Swaddling &amp; Joint Alignment Guidelines</h3>
+                        <p style="font-size:0.85rem;color:var(--color-text-main);line-height:1.4;margin:0;">Crucial advice for parents on how correct swaddling supports healthy baby hip joints and skeletal development.</p>
                     </div>
                 </div>
 
                 <!-- Reel 2 -->
-                <div class="media-item reveal delay-100 card-tint-mint" style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="portrait-video-container">
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F972311702070062%2F&show_text=false&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                    <div class="media-info" style="padding: var(--space-md); text-align: left; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                        <div>
-                            <span class="media-tag" style="background-color: rgba(69, 184, 176, 0.12); color: var(--color-primary); font-weight: 700; font-size: 0.75rem; border-radius: var(--radius-sm); padding: 0.15rem 0.35rem;">Facebook Reel</span>
-                            <h3 style="font-size: 1.05rem; margin-top: var(--space-xs); margin-bottom: var(--space-xs); line-height: 1.35;">Clubfoot Treatment &amp; Casting Timeline</h3>
-                            <p style="font-size: 0.85rem; color: var(--color-text-main); line-height: 1.4; margin: 0;">Dr. Ayesha explains the timeline for Ponseti serial casting and bracing to correct infant clubfoot deformities.</p>
+                <div class="media-item reveal delay-100 card-tint-mint" style="display:flex;flex-direction:column;height:100%;">
+                    <div class="portrait-video-container lazy-video-wrapper"
+                         data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F972311702070062%2F&show_text=false&t=0"
+                         data-type="facebook"
+                         style="cursor:pointer;">
+                        <div class="fb-placeholder" style="position:absolute;inset:0;background:linear-gradient(160deg,#1877F2,#0a4fa8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.9rem;">
+                            <svg viewBox="0 0 24 24" fill="white" width="44" height="44"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <div style="width:58px;height:58px;border:3px solid rgba(255,255,255,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);transition:all .2s;">
+                                <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <span style="color:rgba(255,255,255,0.9);font-size:0.78rem;font-weight:600;letter-spacing:0.03em;">Tap to load reel</span>
                         </div>
+                    </div>
+                    <div class="media-info" style="padding:var(--space-md);text-align:left;flex-grow:1;">
+                        <span class="media-tag" style="background:rgba(69,184,176,0.12);color:var(--color-primary);font-weight:700;font-size:0.75rem;border-radius:var(--radius-sm);padding:0.15rem 0.35rem;">Facebook Reel</span>
+                        <h3 style="font-size:1.05rem;margin-top:var(--space-xs);margin-bottom:var(--space-xs);line-height:1.35;">Clubfoot Treatment &amp; Casting Timeline</h3>
+                        <p style="font-size:0.85rem;color:var(--color-text-main);line-height:1.4;margin:0;">Dr. Ayesha explains the timeline for Ponseti serial casting and bracing to correct infant clubfoot deformities.</p>
                     </div>
                 </div>
 
                 <!-- Reel 3 -->
-                <div class="media-item reveal delay-200 card-tint-mint" style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="portrait-video-container">
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1722529091737435%2F&show_text=false&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                    <div class="media-info" style="padding: var(--space-md); text-align: left; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                        <div>
-                            <span class="media-tag" style="background-color: rgba(69, 184, 176, 0.12); color: var(--color-primary); font-weight: 700; font-size: 0.75rem; border-radius: var(--radius-sm); padding: 0.15rem 0.35rem;">Facebook Reel</span>
-                            <h3 style="font-size: 1.05rem; margin-top: var(--space-xs); margin-bottom: var(--space-xs); line-height: 1.35;">Recognizing Scoliosis Spinal Curvature</h3>
-                            <p style="font-size: 0.85rem; color: var(--color-text-main); line-height: 1.4; margin: 0;">A simple guide for parents to screen their children for early signs of scoliosis at home.</p>
+                <div class="media-item reveal delay-200 card-tint-mint" style="display:flex;flex-direction:column;height:100%;">
+                    <div class="portrait-video-container lazy-video-wrapper"
+                         data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1722529091737435%2F&show_text=false&t=0"
+                         data-type="facebook"
+                         style="cursor:pointer;">
+                        <div class="fb-placeholder" style="position:absolute;inset:0;background:linear-gradient(160deg,#1877F2,#0a4fa8);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.9rem;">
+                            <svg viewBox="0 0 24 24" fill="white" width="44" height="44"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <div style="width:58px;height:58px;border:3px solid rgba(255,255,255,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);transition:all .2s;">
+                                <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <span style="color:rgba(255,255,255,0.9);font-size:0.78rem;font-weight:600;letter-spacing:0.03em;">Tap to load reel</span>
                         </div>
                     </div>
+                    <div class="media-info" style="padding:var(--space-md);text-align:left;flex-grow:1;">
+                        <span class="media-tag" style="background:rgba(69,184,176,0.12);color:var(--color-primary);font-weight:700;font-size:0.75rem;border-radius:var(--radius-sm);padding:0.15rem 0.35rem;">Facebook Reel</span>
+                        <h3 style="font-size:1.05rem;margin-top:var(--space-xs);margin-bottom:var(--space-xs);line-height:1.35;">Recognizing Scoliosis Spinal Curvature</h3>
+                        <p style="font-size:0.85rem;color:var(--color-text-main);line-height:1.4;margin:0;">A simple guide for parents to screen their children for early signs of scoliosis at home.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
 </section>
+
+<!-- Lazy Video Loader: iframes only injected on user click, preventing 3rd-party SDK violations on page load -->
+<script>
+(function () {
+    function init() {
+        document.querySelectorAll('.lazy-video-wrapper').forEach(function (wrapper) {
+            wrapper.addEventListener('click', function () {
+                if (this.querySelector('iframe')) return; // already loaded
+                var src = this.getAttribute('data-src');
+                var type = this.getAttribute('data-type');
+                if (!src) return;
+
+                // Remove placeholder visuals
+                ['fb-placeholder', 'lazy-fb-placeholder'].forEach(function(cls) {
+                    var el = wrapper.querySelector('.' + cls);
+                    if (el) el.remove();
+                });
+                var thumb = wrapper.querySelector('img');
+                if (thumb) thumb.remove();
+                var overlays = wrapper.querySelectorAll('div');
+                overlays.forEach(function(d) { d.remove(); });
+
+                // Inject the real iframe
+                var f = document.createElement('iframe');
+                f.src = src;
+                f.setAttribute('allowfullscreen', 'true');
+                f.setAttribute('scrolling', 'no');
+                f.setAttribute('frameborder', '0');
+                f.setAttribute('loading', 'lazy');
+                f.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; accelerometer; gyroscope');
+                f.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
+                this.appendChild(f);
+                this.style.cursor = 'default';
+            });
+        });
+    }
+    document.readyState === 'loading'
+        ? document.addEventListener('DOMContentLoaded', init)
+        : init();
+})();
+</script>
 
     </main>
 
